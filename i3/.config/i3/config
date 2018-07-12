@@ -203,7 +203,7 @@ exec /home/yhxie/Dropbox/software/script/ss.sh
 exec fcitx
 for_window [instance="QQ.exe"] floating enable
 for_window [instance="QQ.exe"] border none
-# for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
 # mark
 # bindsym $mod4+Ctrl+f mark markinw1
 # bindsym $mod4+f [con_mark="markinw1"] focus
