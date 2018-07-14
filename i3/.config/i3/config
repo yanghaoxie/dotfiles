@@ -182,7 +182,7 @@ bindsym $mod4+d exec amixer -D pulse sset Master 5%-
 # bindsym $mod4+l exec xscreensaver-command -lock
 set $Locker i3lock -B=10 && sleep 1
 bindsym $mod4+Ctrl+l exec --no-startup-id $Locker
-# bindsym $mod4+s exec --no-startup-id systemctl suspend && $Locker
+bindsym $mod4+Ctrl+s exec --no-startup-id systemctl suspend && $Locker
 # bindsym $mod4+l exec i3lock-fancy
 # auto start when i3 start
 # exec dropbox start
