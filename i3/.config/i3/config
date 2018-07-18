@@ -201,8 +201,10 @@ exec_always ~/.config/polybar/launch.sh
 # assign [class="spotify"] 4
 exec /home/yhxie/Dropbox/software/script/ss.sh
 exec fcitx
-for_window [instance="QQ.exe"] floating enable
-for_window [instance="QQ.exe"] border none
+for_window [instance="tim.exe"] floating enable
+for_window [instance="tim.exe"] border none
+for_window [instance="wechat.exe"] floating enable
+for_window [instance="wechat.exe"] border none
 for_window [class="^.*"] border pixel 0
 # mark
 # bindsym $mod4+Ctrl+f mark markinw1
