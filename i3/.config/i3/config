@@ -191,7 +191,7 @@ exec_always xfce4-power-manager
 exec_always unclutter -idle 10 -root
 # exec_always xscreensaver -no-splash
 exec_always xrandr --output HDMI-1 --primary
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always ~/.config/polybar/launch.sh
 # exec --no-startup-id emacs
 # assign [class="Emacs"] 2
 # exec firefox
