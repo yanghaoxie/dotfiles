@@ -1,3 +1,4 @@
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
+export PATH=$HOME/bin:/usr/local/bin:$PATH
