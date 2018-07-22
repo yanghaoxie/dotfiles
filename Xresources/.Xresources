@@ -1,0 +1,72 @@
+! █▓▒░ color scheme
+! Zenburn color-scheme
+URxvt.background              :#1f1f1f
+URxvt.foreground              :#dcdccc
+
+! black + red
+!URxvt.color0                 :#3f3f3f
+URxvt.color0                  :#1f1f1f
+URxvt.color1                  :#705050
+
+! green + yellow
+URxvt.color2                  :#60b48a
+URxvt.color3                  :#dfaf8f
+
+! blue + purple
+URxvt.color4                  :#506070
+URxvt.color5                  :#dc8cc3
+
+! cyan + white
+URxvt.color6                  :#8cd0d3
+URxvt.color7                  :#dcdccc
+
+! bright-black + bright-red
+URxvt.color8                  :#709080
+URxvt.color9                  :#dca3a3
+
+! bright-green + bright-yellow
+URxvt.color10                 :#c3bf9f
+URxvt.color11                 :#f0dfaf
+
+! bright-blue + bright-purple
+URxvt.color12                 :#94bff3
+URxvt.color13                 :#ec93d3
+
+! bright-cyan + bright-white
+URxvt.color14                 :#93e0e3
+URxvt.color15 :#ffffff
+! █▓▒░ fonts
+urxvt*font: xft:Hack:size=14
+urxvt*font: xft:tewi:size=11:antialias=false
+
+urxvt*boldFont: 
+urxvt*italicFont: 
+urxvt*bolditalicFont: 
+
+urxvt*letterSpace: 0
+urxvt*lineSpace: 0
+
+! █▓▒░ interface
+urxvt*scrollBar: false
+urxvt*transparent: false
+! urxvt*internalBorder: 10
+! urxvt*borderColor: #1c1c1c
+! urxvt*borderLess:false
+
+! █▓▒░ extensions
+urxvt.perl-ext-common: default,clipboard,keyboard-select,url-select,tabbedex
+urxvt.keysum.M-u: perl:url-select:select_next
+urxvt.url-select.autocopy: true
+urxvt.url-select.launcher: firefox
+urxvt.keysym.M-Escape: perl:keyboard-select:activate
+urxvt.keysym.M-c:   perl:clipboard:copy
+urxvt.keysym.C-v:   perl:clipboard:paste
+urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+urxvt.clipboard.copycmd:  xsel -ib
+urxvt.clipboard.pastecmd: xsel -ob
+
+! █▓▒░ misc
+urxvt.saveLines: 9999
+urxvt.iso14755: false
+!URxvt*altSendsEscape: true
+
