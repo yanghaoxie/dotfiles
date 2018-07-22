@@ -1,4 +1,4 @@
-personal_ws-1.1 en 14 
+personal_ws-1.1 en 16 
 MANO
 FG
 NFVI
@@ -6,9 +6,11 @@ IEEEtran
 NFV
 Virtulised
 FGE
+SFC
 VNFI
 ILP
 balancer
+SFCs
 NSs
 MILP
 VNF
