@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -171,5 +171,11 @@ e       `./local/PACKAGE/PACKAGE.el'
     :config
     (global-set-key [remap evil-scroll-page-up] 'golden-ratio-scroll-screen-down)
     (global-set-key [remap evil-scroll-page-down] 'golden-ratio-scroll-screen-up)
+    ))
+
+;; general
+(defun my-config/init-general ()
+  (use-package general
+    :ensure t
     ))
 ;;; packages.el ends here
