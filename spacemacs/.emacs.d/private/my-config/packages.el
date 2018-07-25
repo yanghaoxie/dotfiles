@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general helm)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -181,5 +181,35 @@ e       `./local/PACKAGE/PACKAGE.el'
 (defun my-config/init-general ()
   (use-package general
     :ensure t
+    ))
+
+;; helm
+(spacemacs|use-package-add-hook helm
+  :post-config
+  (progn
+    (defun ora-company-number ()
+      "Forward to `company-complete-number'.
+
+Unless the number is potentially part of the candidate.
+In that case, insert the number."
+      (interactive)
+      (let* ((k (this-command-keys))
+             (re (concat "^" company-prefix k)))
+        (if (cl-find-if (lambda (s) (string-match re s))
+                        company-candidates)
+            (self-insert-command 1)
+          (company-complete-number (string-to-number k)))))
+    (let ((map company-active-map))
+      (mapc
+       (lambda (x)
+         (define-key map (format "%d" x) 'ora-company-number
+           ))
+       (number-sequence 0 9))
+      (define-key map " " (lambda ()
+                            (interactive)
+                            (company-abort)
+                            (self-insert-command 1)))
+      (define-key map (kbd "<return>") nil))
+    (setq company-show-numbers t)
     ))
 ;;; packages.el ends here
