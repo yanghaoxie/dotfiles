@@ -89,7 +89,9 @@ e       `./local/PACKAGE/PACKAGE.el'
   ;; key bindings
   (evilified-state-evilify pdf-view-mode pdf-view-mode-map
     "j" '(lambda() (interactive) (pdf-view-next-line-or-next-page 35))
+    "J" '(lambda() (interactive) (pdf-view-next-line-or-next-page 10))
     "k" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 35))
+    "K" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 10))
     )
   (add-hook 'pdf-view-mode-hook (lambda () (pdf-view-midnight-minor-mode t)))
   )
