@@ -61,6 +61,7 @@ values."
      latex
      chinese
      shell
+     xclipboard
      my-config
      )
    ;; List of additional packages that will be installed without being
