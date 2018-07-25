@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general helm)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
