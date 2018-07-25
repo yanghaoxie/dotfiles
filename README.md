@@ -22,7 +22,7 @@ git clone https://github.com/yanghaoxie/dotfiles.git
 ```
 * Symlink modules
 
-For example, if you want to use my emacs dotfiles:
+For example, if you want to use my i3 dotfiles:
 
 ```console
 cd dotfiles
