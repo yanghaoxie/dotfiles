@@ -329,13 +329,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq powerline-height 18)
-  (setq powerline-default-separator 'wave)
-  (setq evil-escape-key-sequence "jk")
-  (setq evil-escape-unordered-key-sequence t)
-  (setq spaceline-minor-modes-p nil)
-  (spaceline-compile)
-  ;; (load-file "/home/yhxie/.emacs.d/private/init-pdf-tools.el")
+    ;; (load-file "/home/yhxie/.emacs.d/private/init-pdf-tools.el")
   ;; (require 'init-pdf-tools)
 )
 

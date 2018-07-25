@@ -220,4 +220,20 @@ In that case, insert the number."
     (evil-snipe-override-mode t)
     (setq evil-snipe-show-prompt nil)
     ))
+
+;; spaceline
+(spacemacs|use-package-add-hook spaceline-config
+  :post-config
+    (setq powerline-height 18)
+    (setq powerline-default-separator 'wave)
+    (setq spaceline-minor-modes-p nil)
+    (spaceline-compile)
+    )
+
+;; evil-escape
+(spacemacs|use-package-add-hook evil-escape
+  :post-config
+  (setq evil-escape-key-sequence "jk")
+  (setq evil-escape-unordered-key-sequence t)
+)
 ;;; packages.el ends here
