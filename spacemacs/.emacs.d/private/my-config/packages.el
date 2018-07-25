@@ -218,7 +218,7 @@ In that case, insert the number."
   :post-config
   (progn
     (evil-snipe-override-mode t)
-    (setq evil-snipe-show-prompt nil)
+    (setq evil-snipe-scope 'line)
     ))
 
 ;; spaceline
