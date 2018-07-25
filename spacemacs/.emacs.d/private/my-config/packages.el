@@ -212,4 +212,12 @@ In that case, insert the number."
       (define-key map (kbd "<return>") nil))
     (setq company-show-numbers t)
     ))
+
+;; evil-snipe
+(spacemacs|use-package-add-hook evil-snipe
+  :post-config
+  (progn
+    (evil-snipe-override-mode t)
+    (setq evil-snipe-show-prompt nil)
+    ))
 ;;; packages.el ends here
