@@ -61,8 +61,8 @@ urxvt.keysym.M-Escape: perl:keyboard-select:activate
 urxvt.keysym.M-c:   perl:clipboard:copy
 urxvt.keysym.C-v:   perl:clipboard:paste
 urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-urxvt.clipboard.copycmd:  xsel -ib
-urxvt.clipboard.pastecmd: xsel -ob
+!urxvt.clipboard.copycmd:  xsel -ib
+!urxvt.clipboard.pastecmd: xsel -ob
 
 ! █▓▒░ misc
 urxvt.saveLines: 9999
