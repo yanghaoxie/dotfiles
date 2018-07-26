@@ -235,5 +235,20 @@ In that case, insert the number."
   :post-config
   (setq evil-escape-key-sequence "jk")
   (setq evil-escape-unordered-key-sequence t)
-)
+  )
+
+;; tex
+(spacemacs|use-package-add-hook tex
+  :post-config
+  (setq TeX-save-query nil)
+  (setq TeX-view-program-selection
+        (quote
+         (((output-dvi has-no-display-manager)
+           "dvi2tty")
+          ((output-dvi style-pstricks)
+           "dvips and gv")
+          (output-dvi "xdvi")
+          (output-pdf "PDF Tools")
+          (output-html "xdg-open"))))
+  )
 ;;; packages.el ends here
