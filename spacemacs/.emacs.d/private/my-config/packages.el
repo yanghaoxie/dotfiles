@@ -224,11 +224,11 @@ In that case, insert the number."
 ;; spaceline
 (spacemacs|use-package-add-hook spaceline-config
   :post-config
-    (setq powerline-height 18)
-    (setq powerline-default-separator 'wave)
-    (setq spaceline-minor-modes-p nil)
-    (spaceline-compile)
-    )
+  (setq powerline-height 18)
+  (setq powerline-default-separator 'wave)
+  (setq spaceline-minor-modes-p nil)
+  (spaceline-compile)
+  )
 
 ;; evil-escape
 (spacemacs|use-package-add-hook evil-escape
