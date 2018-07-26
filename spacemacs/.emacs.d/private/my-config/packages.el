@@ -264,4 +264,10 @@ In that case, insert the number."
           (output-pdf "PDF Tools")
           (output-html "xdg-open"))))
   )
+
+;; helm
+(spacemacs|use-package-add-hook helm
+  :post-config
+  (setq helm-display-function 'helm-default-display-buffer)
+  )
 ;;; packages.el ends here
