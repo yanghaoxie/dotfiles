@@ -92,6 +92,19 @@ e       `./local/PACKAGE/PACKAGE.el'
     "J" '(lambda() (interactive) (pdf-view-next-line-or-next-page 10))
     "k" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 35))
     "K" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 10))
+    "gc" 'eyebrowse-close-window-config
+    "gr" 'eyebrowse-create-window-config
+    "gl" 'eyebrowse-last-window-config
+    "g0" 'eyebrowse-switch-to-window-config-0
+    "g1" 'eyebrowse-switch-to-window-config-1
+    "g2" 'eyebrowse-switch-to-window-config-2
+    "g3" 'eyebrowse-switch-to-window-config-3
+    "g4" 'eyebrowse-switch-to-window-config-4
+    "g5" 'eyebrowse-switch-to-window-config-5
+    "g6" 'eyebrowse-switch-to-window-config-6
+    "g7" 'eyebrowse-switch-to-window-config-7
+    "g8" 'eyebrowse-switch-to-window-config-8
+    "g9" 'eyebrowse-switch-to-window-config-9
     )
   (add-hook 'pdf-view-mode-hook (lambda () (pdf-view-midnight-minor-mode t)))
   )
