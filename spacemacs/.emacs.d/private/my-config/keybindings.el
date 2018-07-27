@@ -1,5 +1,15 @@
+;; We define prefix commands only for the sake of which-key
+(setq spacemacs/key-binding-prefixes
+      '(
+        ("o" "user-define")
+        ("oo" "org-main-file")
+        ))
+(mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
+      spacemacs/key-binding-prefixes)
+;; real key bindings
 (spacemacs/set-leader-keys
   "hb" 'helm-bibtex
+  "oo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
   )
 
 ;; winum-mode
