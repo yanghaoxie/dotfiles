@@ -201,7 +201,7 @@ exec_always ~/.config/polybar/launch.sh
 # assign [class="spotify"] 4
 exec /home/yhxie/Dropbox/software/script/ss.sh
 exec fcitx
-exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec_always --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 for_window [instance="tim.exe"] floating enable
 for_window [instance="tim.exe"] border none
 for_window [instance="wechat.exe"] floating enable
