@@ -270,4 +270,10 @@ In that case, insert the number."
   :post-config
   (setq helm-display-function 'helm-default-display-buffer)
   )
+
+;; shell
+(setq
+ shell-default-shell 'eshell
+ shell-protect-eshell-prompt t
+ )
 ;;; packages.el ends here
