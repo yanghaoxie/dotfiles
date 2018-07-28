@@ -2,14 +2,15 @@
 (setq spacemacs/key-binding-prefixes
       '(
         ("o" "user-define")
-        ("oo" "org-main-file")
+        ("oo" "org-mode")
+        ("ooo" "org-main-file")
         ))
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
 ;; real key bindings
 (spacemacs/set-leader-keys
   "hb" 'helm-bibtex
-  "oo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
+  "ooo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
   )
 
 ;; winum-mode
