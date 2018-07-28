@@ -276,4 +276,8 @@ In that case, insert the number."
  shell-default-shell 'eshell
  shell-protect-eshell-prompt t
  )
+
+;; which-key
+(setq dotspacemacs-which-key-delay 0.8)
+
 ;;; packages.el ends here
