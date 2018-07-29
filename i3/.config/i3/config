@@ -186,7 +186,7 @@ bindsym $mod4+Ctrl+s exec --no-startup-id systemctl suspend && $Locker
 # bindsym $mod4+l exec i3lock-fancy
 # key bindings for hide/show polybar
 bindsym $mod4+i exec polybar-msg cmd hide
-bindsym $mod4+r exec polybar-msg cmd show
+bindsym $mod4+y exec polybar-msg cmd show
 # auto start when i3 start
 # exec dropbox start
 exec python2 /home/yhxie/Program/dropbox.py start
