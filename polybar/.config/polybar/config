@@ -52,7 +52,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = my-text-label dropbox-isrunning
-modules-right = wlan eth pulseaudio memory cpu temperature battery date 
+modules-right = wlan eth-home eth-westeros pulseaudio memory cpu temperature battery date 
 
 ; tray-position = left
 ; tray-padding = 2
@@ -238,10 +238,15 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
-[module/eth]
+[module/eth-westeros]
 type = internal/network
 interface = enp3s0
 interval = 3.0
+
+[module/eth-home]
+type = internal/network
+interface = enp0s31f6
+interval =3.0
 
 ; format-connected-underline = #55aa55
 format-connected-prefix = " "
