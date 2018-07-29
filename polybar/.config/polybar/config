@@ -238,6 +238,7 @@ ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
 
+https://github.com/jaagr/polybar/issues/339
 [module/eth-westeros]
 type = internal/network
 interface = enp3s0
