@@ -278,7 +278,7 @@ In that case, insert the number."
  )
 
 ;; which-key
-(setq dotspacemacs-which-key-delay 0.8)
+;; (setq dotspacemacs-which-key-delay 0.8)
 
 ;; start server
 (server-start)
