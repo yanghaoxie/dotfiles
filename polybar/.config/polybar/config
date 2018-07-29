@@ -62,7 +62,7 @@ modules-right = wlan eth pulseaudio memory cpu temperature battery date
 ; wm-restack = bspwm
 ; wm-restack = i3
 
-; override-redirect = true
+override-redirect = true
 
 ; scroll-up = bspwm-desknext
 ; scroll-down = bspwm-deskprev
