@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general posframe)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -237,7 +237,8 @@ In that case, insert the number."
 ;; spaceline
 (spacemacs|use-package-add-hook spaceline-config
   :post-config
-  (setq powerline-height 18
+  (setq
+   powerline-height 18
    powerline-default-separator 'wave
    spaceline-minor-modes-p nil
    spaceline-buffer-encoding-abbrev-p nil
@@ -304,4 +305,29 @@ In that case, insert the number."
  )
 (purpose-compile-user-configuration)
 
+;; pyim
+(defun my-config/init-posframe ()
+  (use-package posframe
+    :ensure t))
+(spacemacs|use-package-add-hook pyim
+  :pre-init
+  (defvar pyim-title "Pyim") ;; modify pyim mode-line name
+  :post-init
+  (progn
+    (pyim-basedict-enable)
+    (setq-default pyim-english-input-switch-functions
+                  '(
+                    pyim-probe-dynamic-english
+                    pyim-probe-isearch-mode
+                    pyim-probe-program-mode
+                    pyim-probe-org-structure-template
+                    evil-normal-state-minor-mode ;; diable pyim in evil-normal-minor-mode
+                    ))
+
+    (setq-default pyim-punctuation-half-width-functions
+                  '(pyim-probe-punctuation-line-beginning
+                    pyim-probe-punctuation-after-punctuation))
+    (setq pyim-page-tooltip 'posframe)
+    )
+  )
 ;;; packages.el ends here

@@ -46,3 +46,8 @@
  "g9" 'eyebrowse-switch-to-window-config-9
  )
 
+;; pyim
+(general-define-key
+ :keymaps 'override
+ :states 'insert
+ "M-j" 'pyim-convert-code-at-point)
