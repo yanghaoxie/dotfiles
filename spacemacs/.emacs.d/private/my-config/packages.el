@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general posframe)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general posframe cdlatex)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -114,7 +114,7 @@ e       `./local/PACKAGE/PACKAGE.el'
   :post-config
   (progn
     (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
-    ;; (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
+    ;; (add-hook 'org-mode-hook 'turn-on-cdlatex)
     (require 'ox-bibtex)
     (setq org-directory "~/Dropbox/document/org")
     (setq org-latex-pdf-process
@@ -253,6 +253,14 @@ In that case, insert the number."
   (setq evil-escape-key-sequence "jk")
   (setq evil-escape-unordered-key-sequence t)
   )
+
+;; cdlatex
+(defun my-config/init-cdlatex ()
+  (use-package cdlatex
+    :ensure t
+    :config
+    (setq cdlatex-simplify-sub-super-scripts nil)
+    ))
 
 ;; tex
 (spacemacs|use-package-add-hook tex
