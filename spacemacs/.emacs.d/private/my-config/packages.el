@@ -284,4 +284,12 @@ In that case, insert the number."
 
 ;; start server
 (server-start)
+
+;; display-time-mode
+(setq
+ display-time-24hr-format t
+ display-time-default-load-average nil
+ )
+(display-time-mode 1)
+
 ;;; packages.el ends here
