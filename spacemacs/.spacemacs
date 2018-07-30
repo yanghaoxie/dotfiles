@@ -62,6 +62,7 @@ values."
      chinese
      shell
      xclipboard
+     spotify
      my-config
      )
    ;; List of additional packages that will be installed without being
