@@ -11,6 +11,7 @@
 (spacemacs/set-leader-keys
   "hb" 'helm-bibtex
   "ooo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
+  "bM" 'kill-matching-buffers
   )
 
 ;; winum-mode
