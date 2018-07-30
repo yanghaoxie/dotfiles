@@ -276,6 +276,7 @@ In that case, insert the number."
           (output-dvi "xdvi")
           (output-pdf "PDF Tools")
           (output-html "xdg-open"))))
+  (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
   )
 
 ;; helm
