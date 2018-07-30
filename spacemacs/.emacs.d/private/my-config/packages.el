@@ -241,6 +241,7 @@ In that case, insert the number."
    powerline-default-separator 'wave
    spaceline-minor-modes-p nil
    spaceline-buffer-encoding-abbrev-p nil
+   spaceline-purpose-hide-if-not-dedicated t
    )
   (spaceline-compile)
   )
