@@ -243,6 +243,7 @@ In that case, insert the number."
    spaceline-minor-modes-p nil
    spaceline-buffer-encoding-abbrev-p nil
    spaceline-purpose-hide-if-not-dedicated t
+   spaceline-buffer-position-p nil
    )
   (spaceline-compile)
   )
