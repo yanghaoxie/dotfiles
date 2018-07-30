@@ -344,4 +344,11 @@ In that case, insert the number."
     (setq pyim-page-tooltip 'posframe)
     )
   )
+
+;; aggressive-indent-mode
+(spacemacs|use-package-add-hook aggressive-indent
+  :post-config
+  (global-aggressive-indent-mode t)
+  )
+
 ;;; packages.el ends here
