@@ -292,4 +292,29 @@ In that case, insert the number."
  )
 (display-time-mode 1)
 
+;; pyim
+(defun my-config/init-posframe ()
+  (use-package posframe
+    :ensure t))
+(spacemacs|use-package-add-hook pyim
+  :pre-init
+  (defvar pyim-title "Pyim") ;; modify pyim mode-line name
+  :post-init
+  (progn
+    (pyim-basedict-enable)
+    (setq-default pyim-english-input-switch-functions
+                  '(
+                    pyim-probe-dynamic-english
+                    pyim-probe-isearch-mode
+                    pyim-probe-program-mode
+                    pyim-probe-org-structure-template
+                    evil-normal-state-minor-mode ;; diable pyim in evil-normal-minor-mode
+                    ))
+
+    (setq-default pyim-punctuation-half-width-functions
+                  '(pyim-probe-punctuation-line-beginning
+                    pyim-probe-punctuation-after-punctuation))
+    (setq pyim-page-tooltip 'posframe)
+    )
+  )
 ;;; packages.el ends here
