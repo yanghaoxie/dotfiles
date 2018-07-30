@@ -294,7 +294,6 @@ In that case, insert the number."
  )
 (display-time-mode 1)
 
-<<<<<<< HEAD
 ;; purpose
 (setq
  purpose-user-mode-purposes
@@ -306,8 +305,6 @@ In that case, insert the number."
  )
 (purpose-compile-user-configuration)
 
-=======
->>>>>>> origin/master
 ;; pyim
 (defun my-config/init-posframe ()
   (use-package posframe
