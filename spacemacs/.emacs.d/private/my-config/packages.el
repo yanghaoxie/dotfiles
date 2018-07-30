@@ -237,9 +237,11 @@ In that case, insert the number."
 ;; spaceline
 (spacemacs|use-package-add-hook spaceline-config
   :post-config
-  (setq powerline-height 18)
-  (setq powerline-default-separator 'wave)
-  (setq spaceline-minor-modes-p nil)
+  (setq powerline-height 18
+   powerline-default-separator 'wave
+   spaceline-minor-modes-p nil
+   spaceline-buffer-encoding-abbrev-p nil
+   )
   (spaceline-compile)
   )
 
