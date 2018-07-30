@@ -295,7 +295,7 @@ In that case, insert the number."
 (display-time-mode 1)
 
 ;; purpose
-(spacemacs|use-package-add-hook purpose
+(spacemacs|use-package-add-hook window-purpose
   :post-config
   (progn
     (setq
