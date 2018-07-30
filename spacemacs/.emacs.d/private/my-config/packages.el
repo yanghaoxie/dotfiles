@@ -293,4 +293,15 @@ In that case, insert the number."
  )
 (display-time-mode 1)
 
+;; purpose
+(setq
+ purpose-user-mode-purposes
+ '(
+   (latex-mode . LaTeX)
+   (pdf-view-mode . PDF)
+   (emacs-lisp-mode . ELisp)
+   )
+ )
+(purpose-compile-user-configuration)
+
 ;;; packages.el ends here
