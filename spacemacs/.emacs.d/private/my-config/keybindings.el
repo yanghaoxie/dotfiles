@@ -4,6 +4,7 @@
         ("o" "user-define")
         ("oo" "org-mode")
         ("ooo" "org-main-file")
+        ("bM" "kill-matching-buffers-rudeley")
         ))
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
@@ -11,7 +12,7 @@
 (spacemacs/set-leader-keys
   "hb" 'helm-bibtex
   "ooo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
-  "bM" 'kill-matching-buffers
+  "bM" 'spacemacs/kill-matching-buffers-rudely
   )
 
 ;; winum-mode
