@@ -351,4 +351,43 @@ In that case, insert the number."
   (global-aggressive-indent-mode t)
   )
 
+;; mu4e
+(setq mu4e-installation-path "/usr/share/emacs/site-lisp/mu4e" )
+(spacemacs|use-package-add-hook mu4e
+  :post-config
+  (progn
+    (setq
+     mu4e-maildir (expand-file-name "~/Maildir")
+     mu4e-enable-async-operations t
+     mu4e-hide-index-messages t
+     )
+    ;; get mail
+    (setq
+     mu4e-get-mail-command "offlineimap"
+     mu4e-html2text-command "w3m -T text/html"
+     mu4e-update-interval 120
+     mu4e-headers-auto-update t
+     mu4e-compose-signature-auto-include nil
+     )
+    ;; general emacs mail settings; used when composing e-mail
+    ;; the non-mu4e-* stuff is inherited from emacs/message-mode
+    (setq mu4e-reply-to-address "yhaoxie@gmail.com"
+          user-mail-address "yhaoxie@gmail.com"
+          user-full-name  "Yanghao Xie")
+
+    ;; smtp
+    (require 'smtpmail)
+    (setq message-send-mail-function 'smtpmail-send-it
+          smtpmail-debug-info t
+          starttls-gnutls-program "/usr/bin/gnutls-cli"
+          starttls-use-gnutls t
+          smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+          smtpmail-auth-credentials (expand-file-name "~/.gmail-auth-info.gpg")
+          ;; smtpmail-auth-credentials
+          ;; '(("smtp.gmail.com" 587 "yhaoxie@gmail.com" nil))
+          smtpmail-default-smtp-server "smtp.gmail.com"
+          smtpmail-smtp-server "smtp.gmail.com"
+          smtpmail-smtp-service 587)
+    ))
+
 ;;; packages.el ends here
