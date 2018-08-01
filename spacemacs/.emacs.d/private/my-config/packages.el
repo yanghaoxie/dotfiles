@@ -141,7 +141,9 @@ e       `./local/PACKAGE/PACKAGE.el'
     (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                      (org-agenda-files :maxlevel . 9))))
     (spacemacs/set-leader-keys-for-major-mode 'org-mode
-      "h" 'helm-org-in-buffer-headings)
+      "h" 'helm-org-in-buffer-headings
+      "oep" 'org-latex-export-to-pdf
+      )
     )
   )
 
