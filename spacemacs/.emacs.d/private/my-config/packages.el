@@ -114,6 +114,7 @@ e       `./local/PACKAGE/PACKAGE.el'
   :post-config
   (progn
     (add-hook 'org-mode-hook (lambda () (setq truncate-lines nil)))
+    (add-hook 'org-mode-hook 'turn-on-cdlatex)
     ;; (add-hook 'org-mode-hook 'turn-on-cdlatex)
     (require 'ox-bibtex)
     (setq org-directory "~/Dropbox/document/org")
