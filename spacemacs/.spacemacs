@@ -63,6 +63,7 @@ values."
      shell
      xclipboard
      spotify
+     javascript
      mu4e
      my-config
      )
