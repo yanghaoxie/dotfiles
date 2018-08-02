@@ -180,7 +180,7 @@ e       `./local/PACKAGE/PACKAGE.el'
   (use-package beacon
     :ensure t
     :config
-    (setq beacon-blink-when-window-scrolls 0)
+    (setq beacon-blink-when-window-scrolls nil)
     (setq beacon-dont-blink-major-modes '(t pdf-view-mode))
     (beacon-mode 1)
     ))
