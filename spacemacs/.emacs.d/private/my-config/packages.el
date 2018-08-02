@@ -397,6 +397,6 @@ In that case, insert the number."
     ))
 ;; prettify-symbols-mode
 (global-prettify-symbols-mode t)
-(setq prettify-symbols-unprettify-at-point t)
+(setq prettify-symbols-unprettify-at-point 'right-edge)
 
 ;;; packages.el ends here
