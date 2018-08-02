@@ -395,5 +395,8 @@ In that case, insert the number."
           smtpmail-smtp-server "smtp.gmail.com"
           smtpmail-smtp-service 587)
     ))
+;; prettify-symbols-mode
+(global-prettify-symbols-mode t)
+(setq prettify-symbols-unprettify-at-point t)
 
 ;;; packages.el ends here
