@@ -280,6 +280,9 @@ In that case, insert the number."
           (output-pdf "PDF Tools")
           (output-html "xdg-open"))))
   (add-hook 'LaTeX-mode-hook 'turn-on-cdlatex)
+  ;; key bindings
+  (spacemacs/set-leader-keys-for-major-mode 'latex-mode
+    "gp" 'pdf-sync-forward-search)
   )
 
 ;; helm
