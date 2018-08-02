@@ -105,6 +105,7 @@ e       `./local/PACKAGE/PACKAGE.el'
     "g7" 'eyebrowse-switch-to-window-config-7
     "g8" 'eyebrowse-switch-to-window-config-8
     "g9" 'eyebrowse-switch-to-window-config-9
+    "gs" 'pdf-isearch-sync-backward
     )
   (add-hook 'pdf-view-mode-hook (lambda () (pdf-view-midnight-minor-mode t)))
   )
