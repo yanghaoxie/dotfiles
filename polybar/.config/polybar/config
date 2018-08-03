@@ -62,7 +62,7 @@ modules-right = wlan eth-home eth-westeros pulseaudio memory cpu temperature bat
 ; wm-restack = bspwm
 ; wm-restack = i3
 
-; override-redirect = true
+override-redirect = true
 
 ; scroll-up = bspwm-desknext
 ; scroll-down = bspwm-deskprev
