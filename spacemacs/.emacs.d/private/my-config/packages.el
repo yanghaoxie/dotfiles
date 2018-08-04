@@ -113,15 +113,15 @@ e       `./local/PACKAGE/PACKAGE.el'
               (base          (if (eq variant 'dark) (if (true-color-p) "#b2b2b2" "#b2b2b2") (if (true-color-p) "#655370" "#5f5f87")))
               (bg1           (if (eq variant 'dark) (if (true-color-p) "#292b2e" "#262626") (if (true-color-p) "#fbf8ef" "#ffffff")))
               )
-              custom-colors-override
-              (custom-theme-set-faces
-               theme-name)
-              (custom-theme-set-variables
-               theme-name
-               `(pdf-view-midnight-colors '(,base . ,bg1)))
-              )
+             custom-colors-override
+             (custom-theme-set-faces
+              theme-name)
+             (custom-theme-set-variables
+              theme-name
+              `(pdf-view-midnight-colors '(,base . ,bg1)))
+             )
     )
- (advice-add #'create-spacemacs-theme :after #'my/create-spacemacs-theme)
+  (advice-add #'create-spacemacs-theme :after #'my/create-spacemacs-theme)
   )
 
 ;; org-mode
