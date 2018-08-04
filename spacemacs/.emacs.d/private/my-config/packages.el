@@ -30,7 +30,7 @@
 ;;; Code:
 
 (defconst my-config-packages
-  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general posframe cdlatex)
+  '(helm-bibtex org-ref beacon golden-ratio-scroll-screen general posframe cdlatex academic-phrases)
   "The list of Lisp packages required by the my-config layer.
 
 Each entry is either:
@@ -413,5 +413,23 @@ In that case, insert the number."
 ;; prettify-symbols-mode
 (global-prettify-symbols-mode t)
 (setq prettify-symbols-unprettify-at-point 'right-edge)
+
+;; academic-phrases
+(defun my-config/init-academic-phrases ()
+  (use-package academic-phrases
+    :ensure t
+    :config
+    (progn
+      (spacemacs/set-leader-keys-for-major-mode 'latex-mode
+        "oap" 'academic-phrases
+        "oas" 'academic-phrases-by-section
+        )
+      (spacemacs/set-leader-keys-for-major-mode 'org-mode
+        "oap" 'academic-phrases
+        "oas" 'academic-phrases-by-section
+        )
+      )
+    )
+  )
 
 ;;; packages.el ends here
