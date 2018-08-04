@@ -171,7 +171,7 @@ e       `./local/PACKAGE/PACKAGE.el'
     :init
     (progn
       (spacemacs/set-leader-keys-for-major-mode 'org-mode
-        "oa" 'my/org-ref-open-pdf-at-point))
+        "oo" 'my/org-ref-open-pdf-at-point))
     :config
     (progn
       (require 'org-ref)
