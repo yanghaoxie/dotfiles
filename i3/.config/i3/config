@@ -180,9 +180,9 @@ bindsym $mod4+u exec amixer -D pulse sset Master 5%+
 bindsym $mod4+d exec amixer -D pulse sset Master 5%-
 # lock screen, suspend
 # bindsym $mod4+l exec xscreensaver-command -lock
-set $Locker i3lock -B=10
+set $Locker i3lock -B=10 && sleep 1
 bindsym $mod4+Ctrl+l exec --no-startup-id $Locker
-bindsym $mod4+Ctrl+s exec --no-startup-id systemctl suspend && $Locker
+bindsym $mod4+Ctrl+s exec --no-startup-id $Locker && systemctl suspend 
 # bindsym $mod4+l exec i3lock-fancy
 # key bindings for hide/show polybar
 bindsym $mod4+i exec polybar-msg cmd hide
