@@ -432,4 +432,24 @@ In that case, insert the number."
     )
   )
 
+;; display-line-numbers
+(spacemacs|use-package-add-hook display-line-numbers
+  :post-init
+  (progn
+    (if (spacemacs/relative-line-numbers-p)
+        (setq display-line-numbers-type 'visual)
+      (setq display-line-numbers-type t))
+    (spacemacs|add-toggle relative-line-numbers
+      :status (and (featurep 'display-line-numbers)
+                   display-line-numbers-mode
+                   (eq display-line-numbers 'visual))
+      :on (prog1 (display-line-numbers-mode)
+            (setq display-line-numbers 'visual))
+      :off (display-line-numbers-mode -1)
+      :documentation "Show relative line numbers."
+      :on-message "Relative line numbers enabled."
+      :off-message "Line numbers disabled."
+      :evil-leader "tr")
+    ))
+
 ;;; packages.el ends here
