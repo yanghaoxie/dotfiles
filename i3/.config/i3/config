@@ -179,11 +179,39 @@ bindsym $mod4+m exec amixer -D pulse sset Master toggle
 bindsym $mod4+u exec amixer -D pulse sset Master 5%+
 bindsym $mod4+d exec amixer -D pulse sset Master 5%-
 # lock screen, suspend
-# bindsym $mod4+l exec xscreensaver-command -lock
 set $Locker i3lock -B=10 && sleep 1
-bindsym $mod4+Ctrl+l exec --no-startup-id $Locker
-bindsym $mod4+Ctrl+s exec --no-startup-id $Locker && systemctl suspend 
-# bindsym $mod4+l exec i3lock-fancy
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod4+p mode "$mode_system"
+
+## Manual management of external displays
+# Set the shortcuts and what they do
+set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
+mode "$mode_display" {
+    bindsym v exec --no-startup-id xrandr --output eDP-1 --auto --left-of HDMI-1, mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI-1 --auto --right-of eDP-1, mode "default"
+    bindsym x exec --no-startup-id xrandr --output eDP-1 --auto --off, mode "default"
+    bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+# Declare here the shortcut to bring the display selection menu
+bindsym $mod4+x mode "$mode_display"
+
+
 # key bindings for hide/show polybar
 bindsym $mod4+i exec polybar-msg cmd hide
 bindsym $mod4+y exec polybar-msg cmd show
