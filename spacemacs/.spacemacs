@@ -65,6 +65,7 @@ values."
      spotify
      javascript
      mu4e
+     pandoc
      my-config
      )
    ;; List of additional packages that will be installed without being
