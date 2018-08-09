@@ -3,3 +3,5 @@
 	name = Yanghao Xie
 [core]
 	fileMode = false
+[http]
+	proxy = socks5://127.0.0.1:1080
