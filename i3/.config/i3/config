@@ -217,7 +217,7 @@ bindsym $mod4+i exec polybar-msg cmd hide
 bindsym $mod4+y exec polybar-msg cmd show
 # auto start when i3 start
 # exec dropbox start
-exec python2 /home/yhxie/Program/dropbox.py start
+exec_always ~/bin/dropboxcli start
 exec_always xfce4-power-manager
 exec_always unclutter -idle 10 -root
 # exec_always xscreensaver -no-splash
