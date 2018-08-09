@@ -452,4 +452,13 @@ In that case, insert the number."
       :evil-leader "tr")
     ))
 
+;; wakatime-mode
+(spacemacs|use-package-add-hook wakatime-mode
+  :post-config
+  (progn
+    (setq wakatime-api-key "dfaa771f-36fd-45dd-9f3f-db8286ede0b1")
+    (setq wakatime-cli-path "/usr/bin/wakatime")
+    (global-wakatime-mode)
+    ))
+
 ;;; packages.el ends here
