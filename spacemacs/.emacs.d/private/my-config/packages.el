@@ -450,6 +450,7 @@ In that case, insert the number."
       :on-message "Relative line numbers enabled."
       :off-message "Line numbers disabled."
       :evil-leader "tr")
+    (add-hook 'ranger-mode-hook '(lambda () (display-line-numbers-mode 1)))
     ))
 
 ;; wakatime-mode
