@@ -133,6 +133,12 @@ e       `./local/PACKAGE/PACKAGE.el'
     ;; (add-hook 'org-mode-hook 'turn-on-cdlatex)
     (require 'ox-bibtex)
     (setq org-directory "~/Dropbox/document/org")
+    (setq org-agenda-files (apply 'append
+			                            (mapcar
+			                             (lambda (directory)
+				                             (directory-files-recursively
+				                              directory org-agenda-file-regexp))
+			                             '("~/Dropbox/document/org/" ))))
     (setq org-latex-pdf-process
           '(
             "xelatex -shell-escape -interaction nonstopmode -output-directory %o %f"
