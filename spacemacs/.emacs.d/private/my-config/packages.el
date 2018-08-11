@@ -159,8 +159,8 @@ e       `./local/PACKAGE/PACKAGE.el'
     ;;setting up capture
     (setq org-default-notes-file (concat org-directory "/capture/capture.org"))
                                         ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
-    (setq org-refile-targets (quote ((nil :maxlevel . 9)
-                                     (org-agenda-files :maxlevel . 9))))
+    (setq org-refile-targets (quote ((nil :maxlevel . 2)
+                                     (org-agenda-files :maxlevel . 2))))
     (spacemacs/set-leader-keys-for-major-mode 'org-mode
       "h" 'helm-org-in-buffer-headings
       "oep" 'org-latex-export-to-pdf
