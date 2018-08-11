@@ -355,7 +355,7 @@ In that case, insert the number."
   (defvar pyim-title "Pyim") ;; modify pyim mode-line name
   :post-init
   (progn
-    (pyim-basedict-enable)
+    (add-hook 'pyim-load-hook 'pyim-basedict-enable)
     (setq-default pyim-english-input-switch-functions
                   '(
                     pyim-probe-dynamic-english
