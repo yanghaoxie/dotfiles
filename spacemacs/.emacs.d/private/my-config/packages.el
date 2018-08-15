@@ -159,6 +159,13 @@ e       `./local/PACKAGE/PACKAGE.el'
     ;;setting up capture
     (setq org-default-notes-file (concat org-directory "/capture/capture.org"))
                                         ; Targets include this file and any file contributing to the agenda - up to 9 levels deep
+    (setq org-capture-templates
+          (quote (
+                  ("t" "todo" entry (file+headline "~/Dropbox/document/org/capture/capture.org" "Tasks")
+                   "* TODO %?\n%U\n%a\n")
+                  ("n" "note" entry (file+headline "~/Dropbox/document/org/capture/capture.org" "Notes")
+                   "* %?\n%U\n%a\n")
+                  )))
     (setq org-refile-targets (quote ((nil :maxlevel . 2)
                                      (org-agenda-files :maxlevel . 2))))
     (spacemacs/set-leader-keys-for-major-mode 'org-mode
