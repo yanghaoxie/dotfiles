@@ -390,39 +390,86 @@ In that case, insert the number."
 (spacemacs|use-package-add-hook mu4e
   :post-config
   (progn
-    (setq
-     mu4e-maildir (expand-file-name "~/Maildir")
-     mu4e-enable-async-operations t
-     mu4e-hide-index-messages t
-     )
+    (setq mu4e-maildir (expand-file-name "~/email/mbsyncmail")
+          mu4e-hide-index-messages t
+          mu4e-enable-async-operations t)
+
+    (setq mu4e-drafts-folder "/Drafts")
+    (setq mu4e-sent-folder   "/Sent Items")
+    (setq mu4e-trash-folder  "/Trash")
+    (setq message-signature-file "~/.emacs.d/.signature") ; put your signature in this file
     ;; get mail
-    (setq
-     mu4e-get-mail-command "offlineimap"
-     mu4e-html2text-command "w3m -T text/html"
-     mu4e-update-interval 120
-     mu4e-headers-auto-update t
-     mu4e-compose-signature-auto-include nil
-     )
+    (setq mu4e-get-mail-command "proxychains4 mbsync -a"
+          mu4e-html2text-command "w3m -T text/html"
+          mu4e-update-interval 120
+          mu4e-headers-auto-update t
+          mu4e-compose-signature-auto-include nil)
+
+    (setq mu4e-maildir-shortcuts
+          '( ("/INBOX"               . ?i)
+             ("/Sent Items"   . ?s)
+             ("/Trash"       . ?t)
+             ("/Drafts"    . ?d)))
+
+    ;; show images
+    (setq mu4e-show-images t)
+
+    ;; use imagemagick, if available
+    (when (fboundp 'imagemagick-register-types)
+      (imagemagick-register-types))
+
+    ;; don't save message to Sent Messages, IMAP takes care of this
+    (setq mu4e-sent-messages-behavior 'delete)
+
+    ;; spell check
+    (add-hook 'mu4e-compose-mode-hook
+              (defun my-do-compose-stuff ()
+                "My settings for message composition."
+                (set-fill-column 72)
+                (flyspell-mode)))
+
+
+    ;; (setq
+    ;;  mu4e-maildir (expand-file-name "~/Maildir")
+    ;;  mu4e-enable-async-operations t
+    ;;  mu4e-hide-index-messages t
+    ;;  )
+    ;; ;; get mail
+    ;; (setq
+    ;;  mu4e-get-mail-command "offlineimap"
+    ;;  mu4e-html2text-command "w3m -T text/html"
+    ;;  mu4e-update-interval 120
+    ;;  mu4e-headers-auto-update t
+    ;;  mu4e-compose-signature-auto-include nil
+    ;; )
     ;; general emacs mail settings; used when composing e-mail
     ;; the non-mu4e-* stuff is inherited from emacs/message-mode
-    (setq mu4e-reply-to-address "yhaoxie@gmail.com"
-          user-mail-address "yhaoxie@gmail.com"
-          user-full-name  "Yanghao Xie")
+    ;; (setq mu4e-reply-to-address "yhaoxie@gmail.com"
+    ;;       user-mail-address "yhaoxie@gmail.com"
+    ;;       user-full-name  "Yanghao Xie")
+    (setq mu4e-reply-to-address "yanghaoxie@outlook.com"
+          user-mail-address "yanghaoxie@outlook.com"
+          user-full-name "Yanghao Xie")
 
     ;; smtp
-    (require 'smtpmail)
-    (setq message-send-mail-function 'smtpmail-send-it
-          smtpmail-debug-info t
-          starttls-gnutls-program "/usr/bin/gnutls-cli"
-          starttls-use-gnutls t
-          smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
-          smtpmail-auth-credentials (expand-file-name "~/.gmail-auth-info.gpg")
-          ;; smtpmail-auth-credentials
-          ;; '(("smtp.gmail.com" 587 "yhaoxie@gmail.com" nil))
-          smtpmail-default-smtp-server "smtp.gmail.com"
-          smtpmail-smtp-server "smtp.gmail.com"
-          smtpmail-smtp-service 587)
+    ;; (require 'smtpmail)
+    (setq
+     message-send-mail-function 'message-send-mail-with-sendmail
+     sendmail-program "/usr/bin/msmtp"
+     )
+    ;; (setq message-send-mail-function 'smtpmail-send-it
+    ;;       smtpmail-debug-info t
+    ;;       starttls-gnutls-program "/usr/bin/gnutls-cli"
+    ;;       starttls-use-gnutls t
+    ;;       smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+    ;;       smtpmail-auth-credentials (expand-file-name "~/.gmail-auth-info.gpg")
+    ;;       ;; smtpmail-auth-credentials
+    ;;       ;; '(("smtp.gmail.com" 587 "yhaoxie@gmail.com" nil))
+    ;;       smtpmail-default-smtp-server "smtp.gmail.com"
+    ;;       smtpmail-smtp-server "smtp.gmail.com"
+    ;;       smtpmail-smtp-service 587)
     ))
+
 ;; prettify-symbols-mode
 (global-prettify-symbols-mode t)
 (setq prettify-symbols-unprettify-at-point 'right-edge)
