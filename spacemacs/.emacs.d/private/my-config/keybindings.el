@@ -5,6 +5,7 @@
         ("oo" "org-mode")
         ("ooo" "org-main-file")
         ("bM" "kill-matching-buffers-rudeley")
+        ("or" "anzu-replace")
         ))
 (mapc (lambda (x) (apply #'spacemacs/declare-prefix x))
       spacemacs/key-binding-prefixes)
@@ -13,6 +14,8 @@
   "hb" 'helm-bibtex
   "ooo" '(lambda () (interactive) (find-file "~/Dropbox/document/org/main.org"))
   "bM" 'spacemacs/kill-matching-buffers-rudely
+  "ors" 'anzu-query-replace
+  "orr" 'anzu-query-replace-regexp
   )
 
 ;; winum-mode
