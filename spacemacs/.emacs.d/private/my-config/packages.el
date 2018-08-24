@@ -248,6 +248,7 @@ In that case, insert the number."
                             (self-insert-command 1)))
       (define-key map (kbd "<return>") nil))
     (setq company-show-numbers t)
+    (global-company-mode 1)
     ))
 
 ;; evil-snipe
