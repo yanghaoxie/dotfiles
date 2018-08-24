@@ -221,7 +221,7 @@ e       `./local/PACKAGE/PACKAGE.el'
     ))
 
 ;; helm
-(spacemacs|use-package-add-hook helm
+(spacemacs|use-package-add-hook company
   :post-config
   (progn
     (defun ora-company-number ()
