@@ -228,7 +228,7 @@ e       `./local/PACKAGE/PACKAGE.el'
     ))
 
 ;; helm
-(spacemacs|use-package-add-hook helm
+(spacemacs|use-package-add-hook company
   :post-config
   (progn
     (defun ora-company-number ()
@@ -255,6 +255,7 @@ In that case, insert the number."
                             (self-insert-command 1)))
       (define-key map (kbd "<return>") nil))
     (setq company-show-numbers t)
+    (global-company-mode 1)
     ))
 
 ;; evil-snipe
