@@ -2,5 +2,5 @@ export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export HTTP_PROXY="socks5h://127.0.0.1:1080"
-export HTTPS_PROXY="socks5h://127.0.0.1:1080"
+# export HTTP_PROXY="socks5h://127.0.0.1:1080"
+# export HTTPS_PROXY="socks5h://127.0.0.1:1080"
