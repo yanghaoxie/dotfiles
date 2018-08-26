@@ -122,7 +122,7 @@ e       `./local/PACKAGE/PACKAGE.el'
              )
     )
   (advice-add #'create-spacemacs-theme :after #'my/create-spacemacs-theme)
-  (load-theme 'spacemacs-light)
+  (load-theme 'spacemacs-light t)
   )
 
 ;; org-mode
