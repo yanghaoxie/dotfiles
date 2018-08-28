@@ -120,7 +120,9 @@ e       `./local/PACKAGE/PACKAGE.el'
               theme-name)
              (custom-theme-set-variables
               theme-name
-              `(pdf-view-midnight-colors '(,base . ,bg1)))
+              `(pdf-view-midnight-colors '(,base . ,bg1))
+              `(org-format-latex-options '(:background ,bg1 :foreground ,base))
+              )
              )
     )
   (advice-add #'create-spacemacs-theme :after #'my/create-spacemacs-theme)
