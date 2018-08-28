@@ -92,6 +92,8 @@ e       `./local/PACKAGE/PACKAGE.el'
     "J" '(lambda() (interactive) (pdf-view-next-line-or-next-page 10))
     "k" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 35))
     "K" '(lambda() (interactive) (pdf-view-previous-line-or-previous-page 10))
+    "h" '(lambda() (interactive) (image-backward-hscroll 20))
+    "l" '(lambda() (interactive) (image-forward-hscroll 20))
     "gc" 'eyebrowse-close-window-config
     "gr" 'eyebrowse-create-window-config
     "gl" 'eyebrowse-last-window-config
