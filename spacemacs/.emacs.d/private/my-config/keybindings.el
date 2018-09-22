@@ -16,6 +16,8 @@
   "bM" 'spacemacs/kill-matching-buffers-rudely
   "ors" 'anzu-query-replace
   "orr" 'anzu-query-replace-regexp
+  "ga" 'beginning-of-defun
+  "ge" 'end-of-defun
   )
 
 ;; winum-mode
