@@ -238,6 +238,7 @@ for_window [instance="tim.exe"] border none
 for_window [instance="wechat.exe"] floating enable
 for_window [instance="wechat.exe"] border none
 for_window [class="^.*"] border pixel 0
+focus_follows_mouse no
 # mark
 # bindsym $mod4+Ctrl+f mark markinw1
 # bindsym $mod4+f [con_mark="markinw1"] focus
