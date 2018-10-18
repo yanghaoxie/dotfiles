@@ -219,7 +219,7 @@ bindsym $mod4+y exec polybar-msg cmd show
 # exec dropbox start
 exec_always ~/bin/dropboxcli start
 exec_always xfce4-power-manager
-exec_always unclutter -idle 10 -root
+exec_always unclutter --timeout 5
 # exec_always xscreensaver -no-splash
 exec_always xrandr --output HDMI-1 --primary
 exec_always ~/.config/polybar/launch.sh
