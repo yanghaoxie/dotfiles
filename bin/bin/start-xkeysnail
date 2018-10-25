@@ -1,2 +1,3 @@
 #!/bin/zsh
+xhost +SI:localuser:root
 xkeysnail --watch -q /home/yhxie/.config/xkeysnail/xkeysnail-config.py >/dev/null 2>&1 &
