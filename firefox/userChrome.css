@@ -1,0 +1,9 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* only needed once */
+/* Suppress Connecting/Waiting/Reading/Transerring */
+#statuspanel[type="status"] {
+  display: none !important;
+}
+/* Suppress Link Destination Overlay */
+#statuspanel[type="overLink"] {
+  display: none !important;
+}
