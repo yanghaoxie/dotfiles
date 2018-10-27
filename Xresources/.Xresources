@@ -1,6 +1,7 @@
+URxvt.depth :32
 ! █▓▒░ color scheme
 ! Zenburn color-scheme
-URxvt.background              :#1f1f1f
+URxvt.background              :[70]#1f1f1f
 URxvt.foreground              :#dcdccc
 
 ! black + red
