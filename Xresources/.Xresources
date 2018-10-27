@@ -36,7 +36,7 @@ URxvt.color13                 :#ec93d3
 URxvt.color14                 :#93e0e3
 URxvt.color15 :#ffffff
 ! █▓▒░ fonts
-urxvt*font: xft:Hack:size=14
+urxvt*font: xft:Hack:size=10
 
 urxvt*boldFont: 
 urxvt*italicFont: 
