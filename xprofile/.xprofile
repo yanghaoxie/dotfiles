@@ -4,3 +4,12 @@ export GTK_IM_MODULE=fcitx
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export HTTP_PROXY="socks5h://127.0.0.1:1080"
 # export HTTPS_PROXY="socks5h://127.0.0.1:1080"
+# shadowsocks
+/home/yhxie/Dropbox/software/script/ss.sh
+
+# dropbox
+dropbox-cli start
+
+# unclutter
+unclutter --timeout 5 &
+
