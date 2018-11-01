@@ -1,0 +1,43 @@
+" bovine3dom's dogfood
+
+" Provided only as an example.
+" Do not install/run without reading through as you may be surprised by some
+" of the settings.
+ 
+" May require the latest beta builds.
+
+" Move this to $XDG_CONFIG_DIR/tridactyl/tridactylrc (that's
+" ~/.config/tridactyl/tridactylrc to mere mortals) or ~/.tridactylrc and
+" install the native messenger (:installnative in Tridactyl). Run :source to
+" get it in the browser, or just restart.
+
+" NB: If you want "vim-like" behaviour where removing a line from 
+" here makes the setting disappear, uncomment the line below.
+
+sanitise tridactyllocal tridactylsync
+
+"
+" Binds
+"
+" searchurls
+set searchurls.bd http://www.baidu.com/s?wd=
+
+" Sane hinting mode
+set hintfiltermode vimperator-reflow
+" set hintnames numeric
+
+" Make Tridactyl work on more sites at the expense of some security
+set csp clobber
+fixamo_quiet
+
+" New reddit is bad
+" autocmd DocStart www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
+
+" hint
+set hintchars = hjklasdfg
+
+" gui
+guiset_quiet gui none
+guiset_quiet tabs autohide
+guiset_quiet navbar autohide
+guiset_quiet titlebar hide
