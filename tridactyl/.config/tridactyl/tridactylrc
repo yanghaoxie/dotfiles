@@ -34,7 +34,7 @@ fixamo_quiet
 " autocmd DocStart www.reddit.com js tri.excmds.urlmodify("-t", "www", "old")
 
 " hint
-set hintchars = hjklasdfg
+set hintchars hjklasdfg
 
 " gui
 guiset_quiet gui none
