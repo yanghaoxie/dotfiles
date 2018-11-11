@@ -41,3 +41,4 @@ guiset_quiet gui none
 guiset_quiet tabs autohide
 guiset_quiet navbar autohide
 guiset_quiet titlebar hide
+set allowautofocus false
