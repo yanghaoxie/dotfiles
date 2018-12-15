@@ -770,3 +770,9 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- possible workaround for tag preservation when switching back to default screen:
 -- https://github.com/lcpz/awesome-copycats/issues/251
 -- }}}
+
+-- Startup commands and scripts
+awful.util.spawn_with_shell("xrandr --output HDMI-1 --primary --right-of eDP-1")
+awful.util.spawn_with_shell("dropboxcli start")
+awful.util.spawn_with_shell("gnome-screensaver")
+awful.util.spawn_with_shell("/home/yhxie/Dropbox/software/script/ss.sh")
