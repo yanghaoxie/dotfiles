@@ -241,7 +241,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "e", function() awful.util.spawn_with_shell("wmctrl -x -a emacs") end,
       {description = "switch to window emacs", group = "hotkeys"}),
 
-    awful.key({ modkey }, "f", function() awful.util.spawn_with_shell("wmctrl -x -a firefox") end,
+    awful.key({ modkey }, "b", function() awful.util.spawn_with_shell("wmctrl -x -a firefox") end,
       {description = "switch to window firefox", group = "hotkeys"}),
 
     awful.key({ modkey }, "c", function() awful.util.spawn_with_shell("wmctrl -x -a wechat") end,
