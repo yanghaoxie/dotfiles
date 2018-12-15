@@ -237,6 +237,10 @@ root.buttons(my_table.join(
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
+    -- suspend system
+    awful.key({ modkey, "Control" }, "s", function() awful.util.spawn_with_shell("systemctl suspend") end,
+       {description = "switch to window emacs", group = "hotkeys"}),
+
     -- Take a screenshot
     -- https://github.com/lcpz/dots/blob/master/bin/screenshot
     awful.key({ altkey }, "p", function() os.execute("screenshot") end,
