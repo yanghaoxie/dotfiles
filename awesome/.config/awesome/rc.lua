@@ -247,8 +247,9 @@ globalkeys = my_table.join(
               {description = "take a screenshot", group = "hotkeys"}),
 
     -- X screen locker
-    awful.key({ modkey, "Control" }, "l", function () os.execute(scrlocker) end,
-              {description = "lock screen", group = "hotkeys"}),
+    awful.key({ modkey, "Control" }, "l", function() awful.util.spawn_with_shell("gnome-screensaver-command -l") end,
+       {description = "lock screen", group = "hotkeys"}),
+
 
     -- Hotkeys
     awful.key({ modkey,           }, "/",      hotkeys_popup.show_help,
