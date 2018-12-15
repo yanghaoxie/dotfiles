@@ -237,6 +237,9 @@ root.buttons(my_table.join(
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
+    awful.key({ modkey }, "r", function() awful.util.spawn_with_shell("rofi -combi-modi window,drun -show combi -modi combi") end,
+       {description = "rofi", group = "hotkeys"}),
+
     -- suspend system
     awful.key({ modkey, "Control" }, "s", function() awful.util.spawn_with_shell("systemctl suspend") end,
        {description = "switch to window emacs", group = "hotkeys"}),
