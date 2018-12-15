@@ -237,6 +237,22 @@ root.buttons(my_table.join(
 
 -- {{{ Key bindings
 globalkeys = my_table.join(
+    -- switch windows
+    awful.key({ modkey }, "e", function() awful.util.spawn_with_shell("wmctrl -x -a emacs") end,
+      {description = "switch to window emacs", group = "hotkeys"}),
+
+    awful.key({ modkey }, "f", function() awful.util.spawn_with_shell("wmctrl -x -a firefox") end,
+      {description = "switch to window firefox", group = "hotkeys"}),
+
+    awful.key({ modkey }, "c", function() awful.util.spawn_with_shell("wmctrl -x -a wechat") end,
+       {description = "switch to window wechat", group = "hotkeys"}),
+
+    awful.key({ modkey }, "n", function() awful.util.spawn_with_shell("wmctrl -x -a nautilus") end,
+       {description = "switch to window nautilus", group = "hotkeys"}),
+
+    awful.key({ modkey }, "x", function() awful.util.spawn_with_shell("wmctrl -x -a urxvt") end,
+       {description = "switch to window urxvt", group = "hotkeys"}),
+
     awful.key({ modkey }, "r", function() awful.util.spawn_with_shell("rofi -combi-modi window,drun -show combi -modi combi") end,
        {description = "rofi", group = "hotkeys"}),
 
