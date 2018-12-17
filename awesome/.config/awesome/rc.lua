@@ -668,8 +668,10 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     size_hints_honor = false
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen + awful.placement.centered,
+                     size_hints_honor = false,
+		     titlebars_enabled = true,
+		     floating = true
      }
     },
 
