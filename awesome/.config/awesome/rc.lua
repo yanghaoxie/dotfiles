@@ -693,6 +693,10 @@ awful.rules.rules = {
       properties = { titlebars_enabled = false,
 		     floating = false}},
 
+    { rule = { class = "Emacs" },
+      properties = { titlebars_enabled = false,
+		     floating = false}},
+
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
