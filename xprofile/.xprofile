@@ -13,3 +13,5 @@ dropbox-cli start
 # unclutter
 unclutter --timeout 5 &
 
+# used by xkeysnail, which is described in issue #12
+xhost +SI:localuser:root
