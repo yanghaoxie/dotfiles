@@ -263,7 +263,7 @@ globalkeys = my_table.join(
     awful.key({ modkey }, "x", function() awful.util.spawn_with_shell("wmctrl -x -a urxvt") end,
        {description = "switch to window urxvt", group = "hotkeys"}),
 
-    awful.key({ modkey }, "r", function() awful.util.spawn_with_shell("rofi -combi-modi window,drun -show combi -modi combi") end,
+    awful.key({ modkey }, "r", function() awful.util.spawn_with_shell("rofi -show run") end,
        {description = "rofi", group = "hotkeys"}),
 
     -- suspend system
