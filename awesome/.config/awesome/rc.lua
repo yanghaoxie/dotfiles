@@ -798,3 +798,6 @@ awful.util.spawn_with_shell("gnome-screensaver")
 awful.util.spawn_with_shell("/home/yhxie/Dropbox/software/script/ss.sh")
 awful.util.spawn_with_shell("compton")
 awful.util.spawn_with_shell("urxvtd -q -o")
+-- start xkeysnail, but first add "username ALL=NOPASSWD: /usr/bin/xkeysnail" using sudo visudo to make xkeysnail use sudo without password
+awful.util.spawn_with_shell("xhost +SI:localuser:root")
+awful.util.spawn_with_shell("sudo /usr/bin/xkeysnail --watch -q /home/yhxie/.config/xkeysnail/xkeysnail-config.py >/dev/null 2>&1 &")
