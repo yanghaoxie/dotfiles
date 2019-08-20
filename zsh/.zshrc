@@ -62,6 +62,13 @@ ZSH_THEME="avit"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  zsh-autosuggestions
+  tmux
+  autojump
+  archlinux
+  zsh_reload
+  fzf
+  fd
 )
 
 source $ZSH/oh-my-zsh.sh
