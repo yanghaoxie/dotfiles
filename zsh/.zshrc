@@ -66,8 +66,10 @@ plugins=(
   autojump
   archlinux
   zsh_reload
+  fasd
   fzf
   fd
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
