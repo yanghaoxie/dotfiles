@@ -1,5 +1,1 @@
-rsync -avz rsync://melpa.org/packages/ ~/elpa/melpa/
-rsync -avz rsync://stable.melpa.org/packages/ ~/elpa/melpa-stable/
-rsync -avz rsync://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/ ~/elpa/gnu/
-rsync -avz rsync://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/ ~/elpa/emacswiki/
-rsync -avz rsync://mirrors.tuna.tsinghua.edu.cn/elpa/org/ ~/elpa/org/
+rsync -avz rsync://mirrors.tuna.tsinghua.edu.cn/elpa/ ~/elpa
