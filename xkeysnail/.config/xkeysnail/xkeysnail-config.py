@@ -21,6 +21,10 @@ from xkeysnail.transform import *
 # define_modmap({
 #     Key.LEFT_CTRL: Key.CAPSLOCK
 #     })
+define_modmap({
+    Key.RIGHT_CTRL: Key.RIGHT_META
+    })
+
 define_multipurpose_modmap({
     Key.ENTER: [Key.ENTER, Key.RIGHT_CTRL],
     Key.CAPSLOCK: [Key.ESC, Key.LEFT_CTRL],
