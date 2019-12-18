@@ -2,6 +2,9 @@ import re
 from xkeysnail.transform import *
 
 # Keybindings for Firefox/Chrome
+define_keymap(lambda wm_class: wm_class in ("firefox-kde-opensuse"),{
+    K("C-d"): K("C-f"),
+    }, "keybindings in konsole")
 # define_keymap(re.compile("Firefox|Google-chrome"), {
 #     # Ctrl+j/k to switch next/previous tab
 #     K("C-k"): K("C-TAB"),
@@ -21,6 +24,10 @@ from xkeysnail.transform import *
 # define_modmap({
 #     Key.LEFT_CTRL: Key.CAPSLOCK
 #     })
+define_modmap({
+    Key.RIGHT_CTRL: Key.RIGHT_META
+    })
+
 define_multipurpose_modmap({
     Key.ENTER: [Key.ENTER, Key.RIGHT_CTRL],
     Key.CAPSLOCK: [Key.ESC, Key.LEFT_CTRL],
