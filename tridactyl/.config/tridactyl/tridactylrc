@@ -37,8 +37,9 @@ fixamo_quiet
 set hintchars hjklasdfg
 
 " gui
-guiset_quiet gui none
-guiset_quiet tabs autohide
-guiset_quiet navbar autohide
-guiset_quiet titlebar hide
+guiset_quiet gui full
+" guiset_quiet tabs autohide
+" guiset_quiet navbar autohide
+" guiset_quiet titlebar hide
+
 set allowautofocus false
