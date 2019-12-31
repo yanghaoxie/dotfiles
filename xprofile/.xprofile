@@ -14,5 +14,7 @@ dropbox-cli start
 # unclutter
 unclutter --timeout 5 &
 
+# urxvt
+urxvtd -q -o &
 # used by xkeysnail, which is described in issue #12
 xhost +SI:localuser:root
