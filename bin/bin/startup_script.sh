@@ -16,3 +16,5 @@ sudo /usr/bin/xkeysnail --watch -q /home/yhxie/.config/xkeysnail/xkeysnail-confi
 /usr/lib/gsd-xsettings &
 
 # V2RAY_LOCATION_ASSET=/etc/v2ray v2ray --config /etc/v2ray/config-1.json &
+
+urxvtd -q -f -o
