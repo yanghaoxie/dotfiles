@@ -51,7 +51,7 @@ urxvt*scrollBar: false
 urxvt*transparent: false
 ! urxvt*borderColor: #1c1c1c
 urxvt*internalBorder: 0
-! urxvt*borderLess:false
+urxvt*borderLess: false
 
 ! █▓▒░ extensions
 urxvt.perl-ext-common: default,clipboard,keyboard-select,url-select,tabbedex
