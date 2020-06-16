@@ -1,6 +1,7 @@
 export XMODIFIERS=@im=fcitx
 export QT_IM_MODULE=fcitx
 export GTK_IM_MODULE=fcitx
+export XIMO=fcitx
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export HTTP_PROXY="socks5h://127.0.0.1:1080"
 # export HTTPS_PROXY="socks5h://127.0.0.1:1080"
@@ -13,5 +14,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # unclutter
 unclutter --timeout 5 &
 
+# urxvt
+urxvtd -q -o &
 # used by xkeysnail, which is described in issue #12
 xhost +SI:localuser:root
