@@ -1,10 +1,10 @@
 #!/bin/zsh
 
 # shadowsocks
-/home/yhxie/Dropbox/software/script/ss.sh
+# /home/yhxie/Dropbox/software/script/ss.sh
 
 # dropbox
-dropbox-cli start
+# dropbox-cli start
 
 # unclutter
 unclutter --timeout 5 &
@@ -15,4 +15,4 @@ sudo /usr/bin/xkeysnail --watch -q /home/yhxie/.config/xkeysnail/xkeysnail-confi
 # start gsd-xsettings which is needed TIM and wechat
 /usr/lib/gsd-xsettings &
 
-V2RAY_LOCATION_ASSET=/etc/v2ray v2ray --config /etc/v2ray/config-1.json &
+# V2RAY_LOCATION_ASSET=/etc/v2ray v2ray --config /etc/v2ray/config-1.json &
