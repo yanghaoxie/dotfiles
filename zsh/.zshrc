@@ -102,5 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias de="dropboxcli stop"
+alias db="dropboxcli start"
+alias ds="dropboxcli status"
 # 
 XDG_CURRENT_DESKTOP=KDE
