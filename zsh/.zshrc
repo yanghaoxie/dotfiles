@@ -107,3 +107,4 @@ alias db="dropboxcli start"
 alias ds="dropboxcli status"
 # 
 XDG_CURRENT_DESKTOP=KDE
+eval `keychain -q --eval --agents ssh id_rsa`
