@@ -37,7 +37,8 @@ URxvt.depth :32
 ! URxvt.color14                 :#93e0e3
 ! URxvt.color15 :#ffffff
 ! █▓▒░ fonts
-urxvt*font: xft:Hack:size=10
+! urxvt*font: xft:Hack:size=10
+URxvt.font: xft:Hack:style=Regular:size=10,xft:WenQuanYi Micro Hei Mono Light:style=Light:size=10
 
 urxvt*boldFont: 
 urxvt*italicFont: 
