@@ -70,6 +70,7 @@ urxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.keysym.Control-t: perl:tabbedex:new_tab
 URxvt.keysym.Control-l: perl:tabbedex:next_tab
 URxvt.keysym.Control-h: perl:tabbedex:prev_tab
+URxvt.keysym.Control-w: perl:tabbedex:kill_tab
 
 ! █▓▒░ misc
 urxvt.saveLines: 9999
